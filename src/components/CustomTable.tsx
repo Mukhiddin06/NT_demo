@@ -43,7 +43,7 @@ const columns: ColumnsType<DataType> = [
 
 const CustomTable: React.FC = () => {
   const [data, setData] = useState<DataType[]>();
-  const [loading, setLoading] = useState(false);
+  const [loading, _setLoading] = useState(false);
   const [tableParams, setTableParams] = useState<TableParams>({
     pagination: {
       current: 1,
