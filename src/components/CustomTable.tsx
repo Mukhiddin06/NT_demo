@@ -43,7 +43,6 @@ const columns: ColumnsType<DataType> = [
 
 const CustomTable: React.FC = () => {
   const [data, setData] = useState<DataType[]>();
-  const [loading, _setLoading] = useState(false);
   const [tableParams, setTableParams] = useState<TableParams>({
     pagination: {
       current: 1,
@@ -51,9 +50,7 @@ const CustomTable: React.FC = () => {
     },
   });
 
-  const fetchData = () => {
-
-  };
+  const fetchData = () => {};
 
   useEffect(fetchData, [
     tableParams.pagination?.current,
@@ -75,7 +72,6 @@ const CustomTable: React.FC = () => {
       columns={columns}
       dataSource={data}
       pagination={tableParams.pagination}
-      loading={loading}
       onChange={handleTableChange}
     />
   );
